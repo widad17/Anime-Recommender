@@ -6,7 +6,7 @@ import math
 liked_anime_list = [1, 21, 40748, 10629, 16498, 18397]
 
 
-def generate_rating(liked_book_list, rating=10):
+def generate_rating(liked_anime_list, rating=10):
     """
         From a liked anime list, generate a defined rating and returns a DataFrame of that interaction,
         formatted similarly to the score files
@@ -20,7 +20,7 @@ def generate_rating(liked_book_list, rating=10):
 
     """
     interaction_list = []
-    for book in liked_book_list:
+    for book in liked_anime_list:
         interaction_list.append([0, book, rating])
     return pd.DataFrame(interaction_list, columns=['user_id', 'anime_id', 'rating'])
 

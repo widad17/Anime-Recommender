@@ -6,7 +6,7 @@ import re
 
 anime = pd.read_parquet('anime/anime.parquet')
 vectorizer = TfidfVectorizer()
-tfidf = vectorizer.fit_transform(anime['mod_name'])
+tfidf = vectorizer.fit_transform(anime['Mod_name'])
 
 
 def search(query, vectorizer):
